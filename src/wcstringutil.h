@@ -131,6 +131,7 @@ enum class ellipsis_type {
 wcstring truncate(const wcstring &input, int max_len,
                   ellipsis_type etype = ellipsis_type::Prettiest);
 wcstring trim(wcstring input);
+wcstring trim_spaces_ok(wcstring input);
 wcstring trim(wcstring input, const wchar_t *any_of);
 
 /// Converts a string to lowercase.

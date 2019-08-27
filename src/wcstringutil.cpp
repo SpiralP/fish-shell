@@ -53,6 +53,8 @@ wcstring truncate(const wcstring &input, int max_len, ellipsis_type etype) {
 
 wcstring trim(wcstring input) { return trim(std::move(input), L"\t\v \r\n"); }
 
+wcstring trim_spaces_ok(wcstring input) { return trim(std::move(input), L"\t\v\r\n"); }
+
 wcstring trim(wcstring input, const wchar_t *any_of) {
     wcstring result = std::move(input);
     size_t suffix = result.find_last_not_of(any_of);

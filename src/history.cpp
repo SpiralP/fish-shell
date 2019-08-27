@@ -186,7 +186,7 @@ bool history_item_t::merge(const history_item_t &item) {
 }
 
 history_item_t::history_item_t(wcstring str, time_t when, history_identifier_t ident)
-    : contents(trim(std::move(str))), creation_timestamp(when), identifier(ident) {}
+    : contents(trim_spaces_ok(std::move(str))), creation_timestamp(when), identifier(ident) {}
 
 bool history_item_t::matches_search(const wcstring &term, enum history_search_type_t type,
                                     bool case_sensitive) const {
